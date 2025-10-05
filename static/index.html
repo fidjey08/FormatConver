@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件格式转换器</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部导航栏 -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <i class="fas fa-file-converter"></i>
+                <span>文件格式转换器</span>
+            </div>
+            <div class="navbar-menu">
+                <button id="logoutBtn" class="btn btn-outline">
+                    <i class="fas fa-sign-out-alt"></i> 退出
+                </button>
+            </div>
+        </nav>
+
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <!-- 上传区域 -->
+            <div class="upload-section">
+                <h2><i class="fas fa-cloud-upload-alt"></i> 文件上传</h2>
+                <div class="upload-box" id="uploadBox">
+                    <div class="upload-area" id="dropZone">
+                        <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                        <p>拖放文件到这里或点击选择文件</p>
+                        <input type="file" id="fileInput" multiple style="display: none;">
+                    </div>
+                    <div id="fileInfo" class="file-info" style="display: none;">
+                        <div id="fileList" class="file-list">
+                            <!-- 文件列表将在这里动态生成 -->
+                        </div>
+                        <div class="file-controls">
+                            <button id="clearFileBtn" class="btn btn-outline">
+                                <i class="fas fa-times"></i> 清除
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 转换区域 -->
+            <div class="convert-section">
+                <h2><i class="fas fa-exchange-alt"></i> 格式转换</h2>
+                <div class="convert-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="srcFormat">源文件格式</label>
+                            <input type="text" id="srcFormat" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="dstFormat">目标格式</label>
+                            <select id="dstFormat" class="form-control">
+                                <option value="">请选择目标格式</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="encoder">编码器 (可选)</label>
+                            <select id="encoder" class="form-control">
+                                <option value="">默认编码器</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="qscale">转换质量</label>
+                        <div class="qscale-control">
+                            <input type="range" id="qscale" class="form-control qscale-slider" min="1" max="31" value="1" step="1">
+                            <div class="qscale-value">
+                                <span id="qscaleValue">1</span>
+                                <small>当前值: <span id="qscaleQualityLabel">最高质量</span></small>
+                            </div>
+                            <div class="qscale-hint">
+                                <small>提示: 值越小质量越高，文件越大；值越大质量越低，文件越小</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button id="convertBtn" class="btn btn-primary" disabled>
+                            <i class="fas fa-sync-alt"></i> 开始转换
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 任务状态 -->
+            <div class="status-section" id="statusSection">
+                <h2><i class="fas fa-tasks"></i> 任务状态</h2>
+                <div id="taskStatusContainer" class="task-status-container">
+                    <!-- 任务状态将动态添加到这里 -->
+                </div>
+            </div>
+
+            <!-- 支持的格式 -->
+            <div class="formats-section">
+                <h2><i class="fas fa-info-circle"></i> 支持的格式与编码器</h2>
+                <div class="formats-container">
+                    <div class="format-tabs">
+                        <button class="tab-btn active" data-tab="video">视频格式</button>
+                        <button class="tab-btn" data-tab="audio">音频格式</button>
+                        <button class="tab-btn" data-tab="image">图片格式</button>
+                        <button class="tab-btn" data-tab="encoders">编码器</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="videoTab" class="tab-pane active">
+                            <div class="format-list">
+                                <!-- 动态加载视频格式 -->
+                            </div>
+                        </div>
+                        <div id="audioTab" class="tab-pane">
+                            <div class="format-list">
+                                <!-- 动态加载音频格式 -->
+                            </div>
+                        </div>
+                        <div id="imageTab" class="tab-pane">
+                            <div class="format-list">
+                                <!-- 动态加载图片格式 -->
+                            </div>
+                        </div>
+                        <div id="encodersTab" class="tab-pane">
+                            <div class="encoder-filters">
+                                <div class="search-box">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" id="encoderSearch" placeholder="搜索编码器...">
+                                </div>
+                                <div class="filter-buttons">
+                                    <button class="filter-btn active" data-type="all">全部</button>
+                                    <button class="filter-btn" data-type="video">视频编码器</button>
+                                    <button class="filter-btn" data-type="audio">音频编码器</button>
+                                </div>
+                            </div>
+                            <div class="encoder-list">
+                                <!-- 动态加载编码器 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 通知提示 -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <div class="notification-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="notification-message"></div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
