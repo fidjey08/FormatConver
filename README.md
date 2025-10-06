@@ -1,7 +1,9 @@
 # FormatCnver
-![FormatConver](https://socialify.git.ci/Mangofang/FormatConver/image?custom_description=%E7%AE%80%E5%8D%95%E3%80%81%E5%BF%AB%E9%80%9F%E3%80%81%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84FFmpeg%E5%9C%A8%E7%BA%BF%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E5%B9%B3%E5%8F%B0&description=1&font=Inter&forks=1&issues=1&logo=https%3A%2F%2Fforeverhome.live%2Ffile%2FFormatConverLogo.png&name=1&owner=1&pattern=Floating+Cogs&stargazers=1&theme=Dark)> 基于FFmpeg的轻量级的在线文件格式转换平台
+![FormatConver](https://socialify.git.ci/Mangofang/FormatConver/image?custom_description=%E7%AE%80%E5%8D%95%E3%80%81%E5%BF%AB%E9%80%9F%E3%80%81%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84FFmpeg%E5%9C%A8%E7%BA%BF%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E5%B9%B3%E5%8F%B0&description=1&font=Inter&forks=1&issues=1&logo=https%3A%2F%2Fforeverhome.live%2Ffile%2FFormatConverLogo.png&name=1&owner=1&pattern=Floating+Cogs&stargazers=1&theme=Dark)
 
-**<a href="https://filec.foreverhome.live">演示站：https://filec.foreverhome.live</a>**
+> 基于FFmpeg的轻量级的在线文件格式转换平台
+
+**<a href="https://filec.foreverhome.live" target="_blank">演示站：https://filec.foreverhome.live</a>**
 
 🌐 **[English README](README_EN.md)**
 
@@ -20,6 +22,7 @@
 
 ## 支持平台：
 服务端：Windows && Linux
+
 前端：桌面端Web、移动端Web（已做部分适配）
 
 > 前端均由AI生成，如有需要自定更改
