@@ -5,6 +5,8 @@
 
 **<a href="https://filec.foreverhome.live" target="_blank">Demo Site: https://filec.foreverhome.live</a>**
 
+password: admin
+
 🌐 **[中文 README](README.md)**
 
 If you have any questions or encounter program issues, please submit `Issues`
