@@ -5,6 +5,8 @@
 
 **<a href="https://filec.foreverhome.live" target="_blank">演示站：https://filec.foreverhome.live</a>**
 
+密码：admin
+
 🌐 **[English README](README_EN.md)**
 
 如果你有任何问题或反馈程序问题请提交`Issues`
